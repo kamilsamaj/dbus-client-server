@@ -23,6 +23,7 @@ const char *const CLIENT_BUS_NAME = "org.freedesktop.example.add_client";
 const char *const SERVER_OBJECT_PATH_NAME = "/en/example/adder";
 const char *const CLIENT_OBJECT_PATH_NAME = "/en/example/add_client";
 const char *const METHOD_NAME = "add_numbers";
+const char *const PROMPT_MSG = "Please type two numbers separated by a space: ";
 
 DBusError dbus_error;
 
@@ -43,7 +44,7 @@ int main(int argc, char **argv) {
     if (!conn)
         exit(1);
 
-    printf("Please type two numbers separated by a space: ");
+    printf("%s", PROMPT_MSG);
     while (fgets(input, 78, stdin) != NULL) {
 
         // Get a well known name
@@ -116,7 +117,7 @@ int main(int argc, char **argv) {
             exit(1);
         }
 
-        printf("Please type two numbers separated by a space: ");
+        printf("%s", PROMPT_MSG);
     }
 
     return 0;
