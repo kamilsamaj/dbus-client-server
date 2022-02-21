@@ -17,11 +17,11 @@
 #include <dbus/dbus.h>
 
 
-const char *const INTERFACE_NAME = "in.softprayog.dbus_example";
-const char *const SERVER_BUS_NAME = "in.softprayog.add_server";
-const char *const CLIENT_BUS_NAME = "in.softprayog.add_client";
-const char *const SERVER_OBJECT_PATH_NAME = "/in/softprayog/adder";
-const char *const CLIENT_OBJECT_PATH_NAME = "/in/softprayog/add_client";
+const char *const INTERFACE_NAME = "org.freedesktop.example.dbus_example";
+const char *const SERVER_BUS_NAME = "org.freedesktop.example.add_server";
+const char *const CLIENT_BUS_NAME = "org.freedesktop.example.add_client";
+const char *const SERVER_OBJECT_PATH_NAME = "/en/example/adder";
+const char *const CLIENT_OBJECT_PATH_NAME = "/en/example/add_client";
 const char *const METHOD_NAME = "add_numbers";
 
 DBusError dbus_error;
@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
             exit(1);
         }
 
-        printf("Please type two numbers: ");
+        printf("Please type two numbers separated by a space: ");
     }
 
     return 0;

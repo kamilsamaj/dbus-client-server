@@ -14,9 +14,9 @@
 #include <ctype.h>
 #include <dbus/dbus.h>
 
-const char *const INTERFACE_NAME = "in.softprayog.dbus_example";
-const char *const SERVER_BUS_NAME = "in.softprayog.add_server";
-const char *const OBJECT_PATH_NAME = "/in/softprayog/adder";
+const char *const INTERFACE_NAME = "org.freedesktop.example.dbus_example";
+const char *const SERVER_BUS_NAME = "org.freedesktop.example.add_server";
+const char *const OBJECT_PATH_NAME = "/en/example/adder";
 const char *const METHOD_NAME = "add_numbers";
 
 DBusError dbus_error;
